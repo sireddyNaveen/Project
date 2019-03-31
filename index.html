@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebTunings</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+
+<body>
+        <div id="can">
+<canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+
+<div id="controls">
+    <p style="display: none"><label>Fill: <input id="fillBox" type="checkbox"  ></label></p>
+
+    <div class="lightBorder" style="display: none">
+        <p><label>Fill Color: <input id="fillColor" type="color" ></label></p>
+        <p><label>Fill Canvas: <input id="backgroundColor" type="color" ></label></p>
+        <p><label>Stroke Color: <input id="strokeColor" type="color"></label></p>
+    </div>
+
+    <div class="lightBorder" style="display: none">
+        <p><label>Line Width: <input id="lineWidth" type="range" step="1" min="1" max="200" value="4"></label></p>
+        <p><input type="radio" name="lineCap" value="butt" checked="checked">butt</p>
+        <p><input type="radio" name="lineCap" value="round">round</p>
+        <p><input type="radio" name="lineCap" value="square">square</p>
+    </div>
+
+    
+    <p style="display: none"><label>Polygon Sides: <input id="polygonSides" type="range" step="1" min="4" max="4"></label></p>
+    <p style="display: none"> <label>Polygon Angle: <input id="polygonAngle" type="range" step="22.5" min="0" max="90"></label></p>
+
+    <div id="compositionControl" class="lightBorder" style="display: none">
+         
+        <p><input type="radio" name="composition" value="source-over" checked="checked">source-over</p>
+        
+    </div>
+
+    <div >      
+        <input style="display: none" type="radio" name="shape" id="circle" checked="checked" value="circle"/>
+        <input type="button" class="button" id="btncircle"  onclick="btncircleclick();"  value="Circle" /> <br/><br/> </div>
+    <div>         
+        <input style="display: none" type="radio" name="shape" value="polygon" id="polygon"/>
+        <input type="button" class="button" id="btnpolygon"  onclick="btnpolygonclick();"   value="Square"/> <br/><br/> 
+    </div>
+    <div>
+        <input  style="display: none" type="radio" name="shape" id="line"  value="line" />
+        <input type="button" class="button" id="btnline"  onclick="btnlineclick();"  value="Line"/> <br/><br/> 
+    </div>
+
+    <div> 
+        <br /><br />
+   <span class="button" value="Zoom"> ZOOM </span> <br /><br />
+    <input id="scale" type="range" min="0" max="2" step="0.5" value="Zoom"/><br /><br /><br /> 
+    <input id="btnsave" class="button" type="button" value="Save"  onclick="save();" />   <br/><br/>
+    <input id="btnLoad" class="button" type="button" value="Open"  onclick="loading();" />   <br/><br/>
+</div>
+    <div>
+        <input id="clearCanvas" class="button" type="button" value="Clear Canvas"/>   <br/><br/> <br/><br/>  
+        <input id="clearStorage" class="button" type="button" value="Delete"  onclick="clearstorage();"/>   <br/><br/>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
